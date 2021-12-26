@@ -3,10 +3,10 @@
 {% block title %} Tarefas {% endblock %}
 
 {% block body %}
-    <h1>Suas tarefas</h1>
     <ul>
     {% for task in tasks %}
         <li>{{ task }}</li>
     {% endfor %}
     </ul>
+    <p>Adicionar uma <a href="{% url 'tarefas:adicionar' %}">nova tarefa</a></p>
 {% endblock %}

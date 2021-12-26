@@ -1,0 +1,12 @@
+{% extends 'ola/layout.html' %}
+
+{% block title %} Adicionar {% endblock %}
+
+{% block body %}
+<h1>Adicionar tarefa</h1>
+<form >
+    <input type="text" name="tarefa">
+    <input type="submit" value="Adicionar">
+</form>
+<p>Ver <a href="{% url 'tarefas:index' %}">tarefas</a></p>
+{% endblock %}

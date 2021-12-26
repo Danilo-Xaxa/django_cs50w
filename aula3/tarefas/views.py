@@ -1,7 +1,10 @@
 from django.shortcuts import render
 
-tasks = ["foo", "bar", "baz"]
 
 # Create your views here.
 def index(request):
+    tasks = ["foo", "bar", "baz"]
     return render(request, 'tarefas/index.html', {'tasks': tasks})
+
+def adicionar(request):
+    return render(request, 'tarefas/adicionar.html')
