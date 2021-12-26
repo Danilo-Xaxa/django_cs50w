@@ -6,4 +6,4 @@ def index(request):
     return render(request, "ola/index.html")
 
 def cumprimentar(request, nome):
-    return HttpResponse(f"<h1>Hello, {nome.capitalize()}</h1>")
+    return render(request, "ola/cumprimentar.html", {"nome": nome.capitalize()})
