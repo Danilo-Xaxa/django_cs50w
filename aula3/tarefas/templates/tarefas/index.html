@@ -1,0 +1,12 @@
+{% extends 'ola/layout.html' %}
+
+{% block title %} Tarefas {% endblock %}
+
+{% block body %}
+    <h1>Suas tarefas</h1>
+    <ul>
+    {% for task in tasks %}
+        <li>{{ task }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

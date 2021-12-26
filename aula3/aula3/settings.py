@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ola',
     'anonovo',
+    'tarefas',
 ]
 
 MIDDLEWARE = [
