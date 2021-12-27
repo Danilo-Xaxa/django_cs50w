@@ -3,10 +3,11 @@
 {% block title %} Adicionar {% endblock %}
 
 {% block body %}
-<h1>Adicionar tarefa</h1>
-<form >
-    <input type="text" name="tarefa">
-    <input type="submit" value="Adicionar">
-</form>
-<p>Ver <a href="{% url 'tarefas:index' %}">tarefas</a></p>
+    <h1>Adicionar tarefa</h1>
+    <form action="{% url 'tarefas:adicionar' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit">
+    </form>
+    <p>Ver <a href="{% url 'tarefas:index' %}">tarefas</a></p>
 {% endblock %}

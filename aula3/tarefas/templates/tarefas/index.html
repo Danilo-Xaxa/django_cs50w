@@ -4,8 +4,8 @@
 
 {% block body %}
     <ul>
-    {% for task in tasks %}
-        <li>{{ task }}</li>
+    {% for tarefa in tarefas %}
+        <li>{{ tarefa }}</li>
     {% endfor %}
     </ul>
     <p>Adicionar uma <a href="{% url 'tarefas:adicionar' %}">nova tarefa</a></p>
