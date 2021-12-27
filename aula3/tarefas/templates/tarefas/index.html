@@ -6,6 +6,8 @@
     <ul>
     {% for tarefa in tarefas %}
         <li>{{ tarefa }}</li>
+    {% empty %}
+        <li>Sem tarefas.</li>
     {% endfor %}
     </ul>
     <p>Adicionar uma <a href="{% url 'tarefas:adicionar' %}">nova tarefa</a></p>
