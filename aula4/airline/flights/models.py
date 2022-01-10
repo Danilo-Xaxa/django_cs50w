@@ -10,7 +10,6 @@ class Airport(models.Model):
 
 
 class Flight(models.Model):
-    # id = models.IntegerField(primary_key=True)
     origin = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name="departures")
     destination = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name="arrivals")
     duration = models.IntegerField()
@@ -25,4 +24,4 @@ class Passenger(models.Model):
     flights = models.ManyToManyField(Flight, blank=True, related_name="passengers")
 
     def __str__(self):
-        return self.first + self.last
+        return f"{self.first} {self.last}"
