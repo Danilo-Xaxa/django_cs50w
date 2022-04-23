@@ -12,7 +12,6 @@ def index(request):
 
 def flight(request, flight_id):
     flight = Flight.objects.get(pk=flight_id)
-    print(Passenger.objects.exclude(flights=flight).all())
     return render(request, 'flights/flight.html', {
         "flight": flight,
         "passengers": flight.passengers.all(),
